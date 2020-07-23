@@ -2,6 +2,8 @@
 -- Link to schema: https://app.quickdatabasediagrams.com/#/d/Jti5b6
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 --saved all primary keys except emp_no as a string as it includes numbers and letters
+--only rows with not null as a constratint are the primary key ones
+
 
 CREATE TABLE titles (
     title_id VARCHAR(50)  NOT NULL,
@@ -10,7 +12,7 @@ CREATE TABLE titles (
 );
 
 CREATE TABLE employees (
-    emp_no SERIAL NOT NULL,
+    emp_no INT NOT NULL,
     emp_title_id VARCHAR(50),
     birth_date VARCHAR(50),
     first_name VARCHAR(50),
